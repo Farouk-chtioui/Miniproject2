@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson: Strings in JavaScript</title>
+    <link rel="stylesheet" href="lesson8.css">
+  </head>
+  <body>
+    <div id="console">
+    </div>
+    <button id="myButton" onclick="resetBackgroundColor()">Start</button>
+    <div id="first-Q">
+      <div class="container">
+        <h1>Strings in JavaScript</h1>
+        <p>A string is a sequence of characters enclosed in quotation marks, either single quotes (') or double quotes ("). In JavaScript, you can use strings to store and manipulate text data.</p>
+        <pre><code id="code">let greeting = "Hello, world!";
+let name = 'Alice';</code></pre>
+        <p>To declare a string, use either single quotes or double quotes to enclose the text you want to store. You can then assign the string to a variable using the <code>=</code> operator.</p>
+        <button id="startButton">StartExample</button>
+        <div id="example" class="hidden">
+          <h2>Example</h2>
+          <p>Let's declare a string called <code>message</code> and assign it a value of "Hello, JavaScript!".</p>
+          <pre><code>let message = "Hello, JavaScript!";</code></pre>
+          <p>We can then use various methods to manipulate the string. For example, we can use the <code>toUpperCase()</code> method to convert the string to uppercase:</p>
+          <pre><code>console.log(message.toUpperCase());</code>
+          HELLO, JAVASCRIPT!</pre>
+          <p>We can also use the <code>charAt()</code> method to get the character at a specific position in the string:</p>
+          <pre><code>console.log(message.charAt(0));</code>
+          H</pre>
+        </div>
+      </div>
+    </div>
+    <div id="done">
+      <a href="../Variables.html"><button id="dd">Finish</button></a>
+    </div>
+    <script src="lesson8.js"></script>
+  </body>
+</html>

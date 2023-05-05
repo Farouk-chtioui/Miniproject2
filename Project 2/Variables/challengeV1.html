@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Variables ch1</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../28753ddf79d70042ba86564947e13bf5.png" />
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.5;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 40px;
+			background-color: #f2f2f2;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
+		textarea {
+			width: 100%;
+			min-height: 200px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			padding: 10px;
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+
+		.output {
+			background-color: #fff;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			padding: 20px;
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		.error {
+			color: #f00;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.success{
+			color: #9ACD32;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+        pre{
+            font-size: x-large;
+        }
+		#Finish{
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 18px;
+			cursor: pointer;
+			margin-left: 85%;
+
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+		}
+	
+	</style>
+</head>
+<body>
+	<div class="container">
+	  <h1>Variable Declaration Challenge1</h1>
+	  <p>We have two Variables <code>x</code> and <code>y</code>, What will the Result in console.log Be:</p>
+  
+	  <pre>
+		let x = 5;
+		var y = 10;
+		var y = 5;
+		console.log(x + y);
+	  </pre>
+  
+	  <form onsubmit="return false;">
+		<label for="answer">Your Answer:</label>
+		<textarea id="answer" name="answer"></textarea>
+		<button onclick="checkAnswer()">Check</button>
+	  </form>
+  
+	  <div class="output" id="result"></div>
+	  <button onclick="showCorrectAnswer()" id="showAnswerBtn" style="display:none;">Show Correct Answer</button> <!-- Updated button to show correct answer -->
+	</div>
+	<script>
+	  function checkAnswer() {
+		let answer = document.getElementById('answer').value.trim();
+		let expectedAnswer = '10';
+		const resultDiv = document.getElementById('result');
+  
+		if (answer === expectedAnswer) {
+		  resultDiv.innerHTML = '<p class="success">You got it right! </p>';
+		  document.getElementById('showAnswerBtn').style.display = 'none'; // Hide the show correct answer button
+		} else {
+		  resultDiv.innerHTML = '<p class="error">Sorry, that\'s not correct. Please try again.</p>';
+		  document.getElementById('showAnswerBtn').style.display = 'block'; // Show the show correct answer button
+		}
+	  }
+  
+	  // Function to show correct answer when show correct answer button is clicked
+	  function showCorrectAnswer() {
+		document.getElementById('answer').value = '10';
+	  }
+	</script>
+  
+	<div id="next"><a href="../Variables.html"><button id="Finish">Finish</button></a></div>
+  </body>
+  
+</html>

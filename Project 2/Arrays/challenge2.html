@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Arrays ch2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          opacity: 0;
+          animation-name: fadeIn;
+          animation-duration: 1s;
+          animation-delay: 0.5;
+          animation-fill-mode: forwards;
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 40px;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+
+      h1 {
+          text-align: center;
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
+
+      p {
+          font-size: 18px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+      }
+
+      textarea {
+          width: 100%;
+          min-height: 200px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          padding: 10px;
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+      }
+
+      button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-size: 18px;
+          cursor: pointer;
+      }
+
+      button:hover {
+          background-color: #3e8e41;
+      }
+
+      pre{
+          font-size: x-large;
+      }
+
+      #Finish{
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-size: 18px;
+          cursor: pointer;
+          margin-left: 85%;
+          border: none;
+          padding: 10px 20px;
+          font-size: 18px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      .answer {
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .correct {
+        background-color: #9ACD32;
+      }
+
+      .incorrect {
+        color: #f00;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <h1>Arrays Challenge</h1>
+      <h2>Array Manipulation</h2>
+      <p>Write a JavaScript code snippet that performs the following tasks:</p>
+      <p>1. Create an array named 'fruits' with the values "apple", "banana", and "cherry".</p>
+      <p>2. Print the first element of the 'fruits' array to the console.</p>
+      <p>3. Add a new element "date" to the end of the 'fruits' array.</p>
+      <p>4. Print the updated 'fruits' array to the console.</p>
+      <p>5. Remove the second element "banana" from the 'fruits' array.</p>
+      <p>6. Print the updated 'fruits' array to the console.</p>
+      <p>Write your code in the textarea below and click the "Check Answer" button to verify your solution.</p>
+      <textarea id="answer"></textarea>
+      <button onclick="checkAnswer()">Check Answer</button>
+      <div id="result" class="answer"></div>
+      <button onclick="showCorrectAnswer()" id="showAnswerBtn" style="display:none;">Show Correct Answer</button>
+    </div>
+    <script>
+      function checkAnswer() {
+        const answer = document.getElementById("answer").value.trim();
+        const resultDiv = document.getElementById("result");
+  
+        // Validate the answer
+        const expectedAnswer = `let fruits = ["apple", "banana", "cherry"];
+  console.log(fruits[0]);
+  
+  fruits.push("date");
+  console.log(fruits);
+  
+  fruits.splice(1, 1);
+  console.log(fruits);`.trim();
+  
+        if (answer === expectedAnswer) {
+          resultDiv.textContent = "Correct!";
+          resultDiv.classList.remove("incorrect");
+          resultDiv.classList.add("correct");
+          document.getElementById("showAnswerBtn").style.display = "none";
+
+        } else {
+          resultDiv.textContent = "Incorrect! Please try again.";
+          resultDiv.classList.remove("correct");
+          resultDiv.classList.add("incorrect");
+          document.getElementById("showAnswerBtn").style.display = "block";
+
+        }
+  
+        resultDiv.style.display = "block";
+      }
+      function showCorrectAnswer() {
+      const correctAnswer = `let fruits = ["apple", "banana", "cherry"];
+  console.log(fruits[0]);
+  
+  fruits.push("date");
+  console.log(fruits);
+  
+  fruits.splice(1, 1);
+  console.log(fruits);`;
+      document.getElementById("answer").value = correctAnswer;
+    }
+    </script>
+    <div id="next"><a href="../arrays.html"><button id="Finish">Finish</button></a></div>
+  </body>
+</html>

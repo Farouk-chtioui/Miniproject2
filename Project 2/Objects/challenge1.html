@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Objects ch1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          opacity: 0;
+animation-name: fadeIn;
+animation-duration: 1s;
+animation-delay: 0.5;
+animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 40px;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+
+      h1 {
+          text-align: center;
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
+
+      p {
+          font-size: 18px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+      }
+
+      textarea {
+          width: 100%;
+          min-height: 200px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          padding: 10px;
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+      }
+
+      button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-size: 18px;
+          cursor: pointer;
+      }
+
+      button:hover {
+          background-color: #3e8e41;
+      }
+
+
+
+  
+      pre{
+          font-size: x-large;
+      }
+      #Finish{
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-size: 18px;
+          cursor: pointer;
+          margin-left: 85%;
+
+border: none;
+padding: 10px 20px;
+font-size: 18px;
+border-radius: 5px;
+cursor: pointer;
+      }
+    .answer {
+      background-color: #fff;
+          border-radius: 2px;
+          border: 1px solid #ccc;
+          padding: 20px;
+          font-size: 16px;
+          line-height: 1.5;
+    }
+    .correct {
+      background-color: #9ACD32;
+    }
+    .incorrect {
+      color: #f00;
+          font-weight: bold;
+          margin-bottom: 10px;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1>Objects Challenge</h1>
+      <h2>Access Object Properties</h2>
+      <p>Write a JavaScript expression that accesses the 'age' property of the following object:</p>
+      <pre>
+      const person = {
+        name: 'John',
+        age: 25,
+        city: 'New York'
+      };
+      </pre>
+      <textarea id="answer"></textarea>
+      <button onclick="checkAnswer()">Check Answer</button>
+      <div id="result" class="answer"></div>
+      <button onclick="showCorrectAnswer()" id="showAnswerBtn" style="display:none;">Show Correct Answer</button>
+  </div>
+  <script>
+      function checkAnswer() {
+          const answer = document.getElementById("answer").value.trim();
+          const resultDiv = document.getElementById("result");
+
+          // Validate the answer
+          if (answer === "person.age" || answer === "person['age']") {
+              resultDiv.textContent = "Correct!";
+              resultDiv.classList.remove("incorrect");
+              resultDiv.classList.add("correct");
+              document.getElementById("showAnswerBtn").style.display = "none";
+          } else {
+              resultDiv.textContent = "Incorrect! Please try again.";
+              resultDiv.classList.remove("correct");
+              resultDiv.classList.add("incorrect");
+              document.getElementById("showAnswerBtn").style.display = "block";
+          }
+
+          resultDiv.style.display = "block";
+      }
+      function showCorrectAnswer() {
+          const correctAnswer = 'person.age';
+          document.getElementById("answer").value = correctAnswer;
+      }
+  </script>
+  <div id="next"><a href="../objects.html"><button id="Finish">Finish</button></a></div>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 1</title>
+    <link rel="stylesheet" href="lesson6.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../icon.png" />
+  </head>
+  <body>
+    <div id="console"></div>
+    <button id="myButton" onclick="resetBackgroundColor()">Start</button>
+    <div id="first-Q">
+      <div class="container">
+        <h1>How to Create Objects in JavaScript</h1>
+        <p>In JavaScript, objects are used to store collections of data and functions. Objects can contain properties and methods, which are accessed using dot notation.</p>
+        <p>To create an object, you can use the <code>{}</code> notation, or the <code>Object()</code> constructor function. Here's an example:</p>
+        <pre><code id="code">let person = {
+  name: "John",
+  age: 30,
+  hobbies: ["reading", "cooking", "running"],
+  greet: function() {
+    console.log("Hello, my name is " + this.name + ".");
+  }
+};
+
+let car = new Object();
+car.make = "Honda";
+car.model = "Civic";
+car.year = 2022;</code></pre>
+        <p>The first object, <code>person</code>, has properties for <code>name</code>, <code>age</code>, and <code>hobbies</code>, as well as a method called <code>greet</code>. The second object, <code>car</code>, is created using the <code>Object()</code> constructor function and has properties for <code>make</code>, <code>model</code>, and <code>year</code>.</p>
+        <button id="startButton">StartExample</button>
+        <div id="example" class="hidden">
+          <h2>Example</h2>
+          <p>Let's create an object called <code>person</code> with properties for name, age, and email, as well as a method called <code>introduce</code>.</p>
+          <pre><code>let person = {
+  name: "Alice",
+  age: 25,
+  email: "alice@example.com",
+  introduce: function() {
+    console.log("Hi, my name is " + this.name + ", and I'm " + this.age + " years old.");
+  }
+};
+
+person.introduce(); // Hi, my name is Alice, and I'm 25 years old.</code></pre>
+          <p>In this example, we create a new object with properties for name, age, and email, as well as a method called <code>introduce</code>. The method uses the <code>this</code> keyword to refer to the current object's properties.</p>
+        </div>
+      </div>
+    </div>
+    <div id="done">
+      <a href="../objects.html"><button id="dd">Finish</button></a>
+    </div>
+    <script src="lesson6.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+    <link rel="stylesheet" href="lesson5.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../Pics/28753ddf79d70042ba86564947e13bf5.png" />
+  </head>
+  <body>
+    <div id="console"></div>
+    <button id="myButton" onclick="resetBackgroundColor()">Start</button>
+    <div id="first-Q">
+      <div class="container">
+        <h1>How to Define a Function in JavaScript</h1>
+        <p>A function is a block of code that can be called to perform a specific task. In JavaScript, you can define a function using the <code>function</code> keyword.</p>
+        <pre><code id="code">function addNumbers(a, b) {
+  return a + b;
+}</code></pre>
+        <p>To define a function, use the <code>function</code> keyword followed by the function name, a list of parameters enclosed in parentheses, and the function code enclosed in curly braces.</p>
+        <p>The <code>return</code> keyword is used to specify the value that the function should return when it is called.</p>
+        <button id="startButton">Start Example</button>
+        <div id="example" class="hidden">
+          <h2>Example</h2>
+          <p>Let's define a function called <code>multiplyNumbers</code> that takes two parameters and returns their product.</p>
+          <pre><code>function multiplyNumbers(a, b) {
+  return a * b;
+}</code></pre>
+          <p>Now, let's call the <code>multiplyNumbers</code> function with arguments <code>2</code> and <code>3</code>.</p>
+          <pre><code>console.log(multiplyNumbers(2, 3));</code>
+          6</pre>
+          <p>The function should return <code>6</code>, which is the product of <code>2</code> and <code>3</code>.</p>
+        </div>
+      </div>
+    </div>
+    <div id="done">
+      <a href="../functions.html"><button id="dd">Finish</button></a>
+    </div>
+    <script src="lesson5.js"></script>
+  </body>
+</html>

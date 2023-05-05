@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 1</title>
+    <link rel="stylesheet" href="lesson4.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../28753ddf79d70042ba86564947e13bf5.png" />
+  </head>
+  <body>
+    <div id="console"></div>
+    <button id="myButton" onclick="resetBackgroundColor()">Start</button>
+    <div id="first-Q">
+      <div class="container">
+        <h1>Conditionals in JavaScript</h1>
+        <p>Conditionals allow you to execute different code depending on whether a certain condition is true or false. In JavaScript, you can use the <code>if</code>, <code>else if</code>, and <code>else</code> statements to create conditional code blocks.</p>
+        <p>The basic syntax for the <code>if</code> statement is:</p>
+        <pre><code id="code">if (condition) {
+  // code to execute if condition is true
+}</code></pre>
+        <p>The <code>else if</code> statement can be used to add additional conditions to check:</p>
+        <pre><code id="code">if (condition1) {
+  // code to execute if condition1 is true
+} else if (condition2) {
+  // code to execute if condition2 is true
+}</code></pre>
+        <p>The <code>else</code> statement can be used to execute code if none of the previous conditions are true:</p>
+        <pre><code id="code">if (condition1) {
+  // code to execute if condition1 is true
+} else if (condition2) {
+  // code to execute if condition2 is true
+} else {
+  // code to execute if neither condition1 nor condition2 is true
+}</code></pre>
+        <button id="startButton">Start Example</button>
+        <div id="example" class="hidden">
+          <h2>Example</h2>
+          <p>Let's declare a variable called <code>age</code> and assign it a value of 18. We want to check if the person is old enough to vote.</p>
+          <pre><code>let age = 18;</code></pre>
+          <p>We can use an <code>if</code> statement to check if the person is at least 18:</p>
+          <pre><code>if (age >= 18) {
+  console.log("You are old enough to vote.");
+}</code></pre>
+          <p>We can add an <code>else</code> statement to handle the case where the person is not old enough:</p>
+          <pre><code>if (age >= 18) {
+  console.log("You are old enough to vote.");
+} else {
+  console.log("You are not old enough to vote.");
+}</code></pre>
+        </div>
+      </div>
+    </div>
+    <div id="done">
+      <a href="../conditionals.html"><button id="dd">Finish</button></a>
+    </div>
+    <script src="Lesson4.js"></script>
+  </body>
+</html>
